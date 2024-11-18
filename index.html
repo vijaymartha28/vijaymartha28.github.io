@@ -3,105 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Vijay's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+       
+
+    </style>
 </head>
 <body>
-    <style>
-        table tr td{
-            padding: 10px;
-        }
+    <nav>
+        <div class="logo">Vijay's Portfolio</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-sun-lighting-flaticons-flat-flat-icons.png" id="toggleIcon" class="icon-toggle" alt="Toggle Icon">
+            </li>
+        </ul>
+    </nav>
 
-        .project:hover{
-           background-color: rgb(231, 103, 169);
-           cursor: pointer;
-           color: white;
-        }
-        .project{
-            height: 350px;
-        }
-        h1,h2,h3{
-            color: dimgray;
-        }
-    </style>
-    <script>
-            const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
-
-mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-    </script>
-
-    <header>
-        <nav>
-            <div class="logo">My Portfolio</div>
-            <ul class="nav-links">
-               
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-               <!--<li><a href="Profile.html">Profile</a></li>--> 
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-    </header>
-
-    <section id="about">
-        <h1>About Me</h1>
-        <p>Welcome to my portfolio! I am a passionate .Net  Developer with a love for creating web applications.</p>
-  
-    </section>
-    <section id="projects">
-        <h1>My Projects</h1>
-        <div class="project-grid">
-            <a style="text-decoration: none;color: black;" href="#" target="_blank">
-            <div class="project" >
-                <h2>MSRTC</h2>
-                <p>The Project is for Modernization of Data Processing Section in MSRTC, Central office Mumbai.  Currently the Central office is processing data at EDP department using a data processing system developed in COBOL</p>
-                <p>The proposed system is to develop and Centralized Web application System hosted on a Web Server accessible to Authorized MSRCT Users of respective departments with relevant roles to input data and process data.</p>
-            </div>
-        </a>
-        <a style="text-decoration: none;color: black;" href="#"  target="_blank">
-           
-            <div class="project">
-                <h2>NepalJAH HIMS</h2>
-               <p>The main aim of this project to create a comprehensive and efficient software solution for  the overall management and delivery of healthcare services within a healthcare organization or system.</p>
-                <p>The primary objectives can vary based on the specific goals and requirements of the healthcare organization implementing the system.</p>
-           
-            </div>
-          </a>
-        </div>
-    </section>
-    <section id="contact">
-        <form>
-    <div >
+    <header id="home">
+        <div class="scrolling-text">
+        <h1>Hi, I am Vijay</h1>
+       <!-- <p class="typical-wrapper">Full Stack Developer</p>-->
         
-        <h2>Contact</h2>
-        <div style="text-align: center;">
-        <div>
-           
-            <input type="text" placeholder="Enter Name">
-        </div>
-        <div>
-           
-            <input type="email" placeholder="Enter Email">
-        </div>
-        <div>
-           
-           <textarea placeholder="Enter Message"></textarea>
-        </div>
-        <div>
-        <p><input type="submit" value="submit"></p>
+        <p>I am currently working at Neumeric Technologies  as a .Net Developer</p>
+      
     </div>
-</div>
-    </div>
-</form>
+    </header>
+    
+       
+   
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate .Net / Full-Stack Developer with experience in building responsive and scalable web applications. I strive to write clean and efficient code, always learning and improving along the way.</p>
     </section>
 
-    
-  
+    <section id="services">
+        <h2>Services</h2>
+        <p>>.Net Development, Full-Stack Solutions, UI/UX Design, and more.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Details and examples of recent projects can be added here.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: vijay@example.com</p>
+        <p>LinkedIn: <a href="https://linkedin.com" target="_blank">Vijay's LinkedIn</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Vijay. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const toggleIcon = document.getElementById('toggleIcon');
+        let isDarkMode = false;
+
+        toggleIcon.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            isDarkMode = !isDarkMode;
+
+            // Change the icon based on the current mode
+            toggleIcon.src = isDarkMode
+                ? 'https://img.icons8.com/external-prettycons-lineal-color-prettycons/49/000000/external-moon-astrology-and-symbology-prettycons-lineal-color-prettycons.png'
+                : 'https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-sun-lighting-flaticons-flat-flat-icons.png';
+        });
+    </script>
+</body>
+</html>
